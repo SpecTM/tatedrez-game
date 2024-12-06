@@ -1,3 +1,25 @@
+Hey! First of all, thanks for taking the time to read this, in this document I will add some descriptions on the decisions taken on the assesment.
+
+Before that, you may notice that there are no commit/branching, this is because as I encountered major personal issues I could not work properly on the project and I wanted to finish ASAP to no waste the time of the team reviewing this assesment.
+
+I'm aware that the usage of the version control system is an evaluation criteria, so if the assesment is appealing enough and you would like to continue I can add more documentation on how I would have handled the version control for the assesment.
+
+DECISIONS TAKEN ON THE ASSESMENT: 
+
+I tried to make a modular approach to the architecture (Bootstrapper, PlayerManager, PieceManager) and event-driven approach with an EventManager, this will help with the separation of concerns
+
+All pieces/important game info is handled via scriptable obejcts, making it a scalable solution if we want to tweak data easily or add new data
+
+Most of the classes (Cell, Board, Piece) have been treated following the single responsibility principle, having clear and focused responsibilities. In a bigger project probably the Event Manager should have been split into more concise managers
+
+Classes like Piece are extendable through inheritance and polymorphism, taking in made the open-closed principle
+
+The game UI was built with layouts/content size fitters to ensure a correct display through different device resolutions (iphone/ipad/android)
+
+For the game feel, created a wrapper around the dotween asset so we can easily use it through different scenarios
+
+-----
+
 Please confirm receipt of this case study with your estimated time of delivery 👍
 
 # Tatedrez-game
